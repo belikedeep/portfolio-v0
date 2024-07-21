@@ -5,34 +5,43 @@ import formatDate from "../utils/dateFormatter";
 ---
 
 <Layout navRefId="blog">
-  <header>
-    <h1 class="flex gap-2 items-center">
-      <a href="/"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="w-5 h-5 pr-1 dark:text-gray-600"
-        >
-          <path
-            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-          ></path>
-        </svg></a
-      > / &nbsp;
-      <a href="/blog">Blog</a>
-      / &nbsp;
-      {frontmatter.title}
-      <p>- {formatDate(frontmatter.date)}</p>
+  <header class="mb-8">
+    <h1 class="flex flex-col sm:flex-row items-start sm:items-center text-lg sm:text-xl md:text-2xl gap-2 flex-wrap">
+      <div class="flex items-center">
+        <a href="/" class="inline-flex items-center hover:text-blue-300 transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-5 h-5 mr-1 dark:text-gray-400"
+          >
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            ></path>
+          </svg>
+          Home
+        </a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="/blog" class="hover:text-blue-300 transition-colors">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+      </div>
+      <div class="font-semibold text-xl sm:text-2xl md:text-3xl mt-2 sm:mt-0">
+        {frontmatter.title}
+      </div>
     </h1>
+    <p class="text-sm sm:text-base text-gray-400 mt-2">
+      {formatDate(frontmatter.date)}
+    </p>
   </header>
   <article class="mt-9 markdown-content">
     <slot />
   </article>
-  <a
-    href="/blog"
-    class="text-xl mt-5 text-gray-200 font-medium hover:underline hover:decoration-blue-300/30 hover:underline-offset-2 hover:text-blue-200/90 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
-    >Back to all posts</a
+  
+    <a href="/blog"
+    class="inline-block text-lg sm:text-xl mt-8 text-gray-200 font-medium hover:underline hover:text-blue-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
   >
+    Back to all posts
+  </a>
 </Layout>
 
 <style is:global>
