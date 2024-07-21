@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 
-The site should now be available at `http://localhost:3000`.
+The site should now be available at `http://localhost:4321`.
 
 ## Deployment
 
