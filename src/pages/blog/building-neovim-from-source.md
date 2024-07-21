@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPostLayout.astro
 title: "Building Neovim from source"
 description: "Building Neovim: A Comprehensive Guide."
-date: "2024-01-01"
+date: "15 May, 2024"
 ---
 
 Neovim is a highly customizable and lightweight text editor (it can be configured to something much more!)
