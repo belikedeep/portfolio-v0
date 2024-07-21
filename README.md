@@ -1,8 +1,9 @@
-Here's the complete README in markdown format with some additional information:
-
 # My Portfolio
 
 Welcome to my portfolio website. This site uses [Astro](https://astro.build/), a modern static site generator, and TypeScript.
+
+![scrnli_7_21_2024_8-19-08 PM](https://github.com/user-attachments/assets/e7b941f5-05a0-4d85-b606-d7da20bde6a4)
+
 
 ## Features
 
