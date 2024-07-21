@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Deepak Mardi",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@headlessui/react": "^1.7.16",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^4.12.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.12.0",
+    "react-use": "^17.4.0",
+    "serverless": "link:@astrojs/vercel/serverless",
+    "tailwindcss": "^3.0.24"
+  }
+}

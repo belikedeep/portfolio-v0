@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogPreview from "../components/blogs/BlogPreview.astro";
+
+interface BlogPost {
+  frontmatter: {
+    title: string;
+    date: string;
+    description: string;
+  };
+  url: string;
+}
+
+const allPosts = await Astro.glob<BlogPost>("./blog/*.md");
+const sortedPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+);
+---
+
+<Layout navRefId="blog">
+  <header>
+    <div class="py-5 pb-7">
+      <div class="flex items-center justify-center gap-3">
+        <span class="animate-bounce text-4xl">📝</span>
+        <h2 class="font-bold text-3xl">Tech Blogs</h2>
+      </div>
+      <p class="pt-5">
+        Whether you're a fellow developer, a curious learner, or just stumbled
+        upon this corner of the internet, I hope you'll find something here that
+        inspires, informs, or intrigues you.
+      </p>
+      <p class="pt-3">
+        All of my long-form thoughts on programming, leadership, product design,
+        and more, collected in chronological order.
+      </p>
+    </div>
+    <h1 class="flex gap-2 items-center">
+      <a href="/"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5 pr-1 dark:text-gray-600"
+        >
+          <path
+            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+          ></path>
+        </svg></a
+      > / &nbsp;
+      <a>Blogs</a>
+    </h1>
+  </header>
+  <BlogPreview posts={sortedPosts} />
+  <a
+    href="/"
+    class="text-xl text-gray-200 font-medium hover:underline hover:decoration-blue-300/30 hover:underline-offset-2 hover:text-blue-200/90 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
+    >Back to Home</a
+  >
+</Layout>

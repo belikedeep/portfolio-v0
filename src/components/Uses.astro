@@ -1,0 +1,58 @@
+---
+interface UseItem {
+  category: string;
+  items: {
+    name: string;
+    description: string;
+  }[];
+}
+
+interface Props {
+  uses: UseItem[];
+  limit?: number;
+}
+
+const { uses, limit } = Astro.props;
+const displayUses = limit ? uses.slice(0, limit) : uses;
+---
+
+<div class="uses-container space-y-16 mt-9 mb-7">
+  <p class="mb-8 text-xl text-gray-300">
+    I get asked a lot about the things I use to build software, stay productive,
+    or buy to fool myself into thinking I’m being productive when I’m really
+    just procrastinating. Here’s a big list of all of my favorite stuff.
+  </p>
+  {
+    displayUses.map((category) => (
+      <div class="category-container">
+        <div class="md:flex md:space-x-8">
+          <div class="md:w-1/4 mb-4 md:mb-0">
+            <h2 class="text-lg font- sticky pt-3">{category.category}</h2>
+          </div>
+          <div class="md:w-3/4">
+            <ul class="space-y-8">
+              {category.items.map((item) => (
+                <li class="bg-white/5 p-6 rounded-lg">
+                  <h3 class="text-lg font- mb-2">{item.name}</h3>
+                  <p class="text-base text-gray-300">{item.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+  {
+    limit && uses.length >= limit && (
+      <div class="mt-8">
+        <a
+          href="/uses"
+          class="text-xl text-gray-200 font-medium hover:underline hover:decoration-blue-300/30 hover:underline-offset-2 hover:text-blue-200/90 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
+        >
+          See all uses →
+        </a>
+      </div>
+    )
+  }
+</div>

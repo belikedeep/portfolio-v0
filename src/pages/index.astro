@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/about/About.astro";
+import Skills from "../components/skills/Skills.astro";
+import Projects from "../components/projects/Projects.astro";
+import RecentBlog from "../components/blogs/RecentBlog.astro";
+import Uses from "../components/Uses.astro";
+import { uses } from "../data/uses";
+---
+
+<Layout navRefId="about">
+  <div id="about">
+    <About />
+  </div>
+  <Skills />
+  <Projects />
+  <RecentBlog />
+  <section class="mt-16">
+    <h2
+      class="flex items-center text-2xl sm:text-3xl font-medium text-gray-100/80"
+    >
+      <span class="mr-4">💻 Uses</span>
+      <span class="flex-grow h-px bg-white"></span>
+    </h2>
+    <Uses uses={uses} limit={2} />
+  </section>
+</Layout>

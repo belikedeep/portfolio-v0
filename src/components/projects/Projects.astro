@@ -1,0 +1,36 @@
+---
+import { projects } from "../../data/projects";
+import Card from "./Card.astro";
+---
+
+<div class="mt-16">
+  <h2
+    class="flex items-center text-2xl sm:text-3xl font-medium text-gray-100/80"
+  >
+    <span class="mr-4">🧙‍♂️ Projects</span>
+    <span class="flex-grow h-px bg-white"></span>
+  </h2>
+  <p class="mt-7 text-xl text-gray-200/80">
+    I"ve build many projects using different technologies. Here are some of my
+    notable works.
+  </p>
+  <div class="mt-9 mb-7 grid grid-cols-1 gap-5">
+    {
+      projects.map((project) => (
+        <Card
+          image={project.image}
+          title={project.title}
+          link={project.link}
+          substring={project.stack.trim().split(",").join(" · ")}
+          description={project.description}
+        />
+      ))
+    }
+  </div>
+  <a
+    href="https://github.com/belikedeep?tab=repositories"
+    class="text-xl text-gray-200 font-medium hover:underline hover:decoration-blue-300/30 hover:underline-offset-2 hover:text-blue-200/90 focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
+  >
+    View more projects
+  </a>
+</div>

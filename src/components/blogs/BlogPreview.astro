@@ -1,0 +1,62 @@
+---
+import formatDate from "../../utils/dateFormatter";
+
+interface BlogPost {
+  frontmatter: {
+    title: string;
+    description: string;
+    date: string;
+  };
+  url: string;
+}
+
+interface Props {
+  posts: BlogPost[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="mt-9 mb-7 space-y-8">
+  {
+    posts.map((post) => (
+      <li>
+        <a href={post.url} class="block">
+          <div class="cursor-pointer group hover:opacity-80 rounded-2xl bg-white/5 p-4 sm:p-6 shadow-surface-elevation-low transition duration-300 hover:bg-white/10 hover:shadow-surface-elevation-medium">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="sm:w-32 flex-shrink-0">
+                <p class="text-sm text-gray-400">
+                  {formatDate(post.frontmatter.date)}
+                </p>
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-xl sm:text-2xl font-medium text-white">
+                  {post.frontmatter.title}
+                </h3>
+                <p class="text-base text-gray-300 my-2">
+                  {post.frontmatter.description}
+                </p>
+                <p class="text-orange-400 text-base flex items-center">
+                  Read Article{" "}
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                    class="ml-1 h-4 w-4 stroke-current"
+                  >
+                    <path
+                      d="M6.75 5.75 9.25 8l-2.5 2.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</ul>
