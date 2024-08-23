@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: "Understanding Multer"
-description: "Building Neovim: A Comprehensive Guide."
+description: "In this blog, we’ll explore how to set up file uploads with `multer`"
 date: "23 Aug, 2024"
 ---
 
