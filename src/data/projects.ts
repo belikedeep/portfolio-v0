@@ -9,12 +9,12 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Awesome Project",
-    link: "https://github.com/yourusername/awesome-project",
+    title: "Kanban Board",
+    link: "https://github.com/belikedeep/kanbanBoard",
     stack: "React, Node.js, MongoDB",
     description: "A brief description of the awesome project",
     image: "../../../public/icon.jpg",
-    slug: "awesome-project", // This should match the Markdown file name
+    slug: "kanban-board", // This should match the Markdown file name
   },
   // {
   //   title: "Typing Dash",
