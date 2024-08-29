@@ -1,0 +1,14 @@
+---
+layout: ../../layouts/ProjectLayout.astro
+title: My Awesome Project
+date: 2023-08-12
+author: Your Name
+image: ../../../icon.jpg
+---
+
+## Links
+
+- [GitHub Repository](https://github.com/belikedeep)
+- [Live Demo](https://github.com/belikedeep)
+
+## WIP
