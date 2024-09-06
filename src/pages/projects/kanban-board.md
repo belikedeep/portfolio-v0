@@ -1,67 +1,72 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: My Awesome Project
+title: Kanban Board
 date: 2023-08-12
-author: Your Name
-image: ../../../public/icon.jpg
+author: belikedeep
+image: ../../../icon.jpg
 ---
 
 ## Links
 
-- [GitHub Repository](https://github.com/belikedeep)
-- [Live Demo](https://github.com/belikedeep)
+- [GitHub Repository](https://github.com/belikedeep/kanbanBoard)
+- [Live Demo](https://kanban-f5x3.vercel.app/)
 
-## Kanban Board Project (v0.1.0)
+# Kanban Board with Next.js
 
-This project implements a Kanban board web application using Next.js and a Prisma database.
+## Introduction
 
-### Features
+I built a **Kanban Board Web Application** using **Next.js** and **Prisma**. This project represents my exploration into modern web technologies, focusing on performance, usability, and a clean development process.
 
-- Visualize tasks in different stages (e.g., To Do, In Progress, Done)
-- Drag and drop functionality for tasks between stages
-- User authentication (potentially)
+## Key Features
 
-### Dependencies
+My Kanban board project includes several core features designed to enhance user experience:
 
-This project uses a variety of libraries and frameworks:
+- **Task Visualization:** Users can see tasks categorized by stages like "To Do," "In Progress," and "Done."
+- **Drag and Drop:** A smooth drag-and-drop interface allows tasks to be easily moved between stages.
+- **User Authentication:** While not fully implemented, there’s potential integration with Clerk.js for secure user authentication.
 
-- **Frontend:** Next.js, React, Framer Motion, React Icons, React-Spinners
-- **Backend:** Prisma (database access)
-- **Styling:** Tailwind CSS
-- **Authentication:** Clerk.js (potential integration)
-- **Development:** ESLint, TypeScript
+## Technology Stack
 
-### Usage
+The project is built using a modern and robust tech stack:
 
-**1. Prerequisites**
+- **Frontend:** Developed with **Next.js** and **React** for a seamless, responsive user interface.
+- **Animations:** **Framer Motion** is used to add fluid transitions and interactions.
+- **Database:** **Prisma** and MongoDB serves as the database access layer, providing a simple and powerful way to interact with the database.
+- **Styling:** **Tailwind CSS** ensures the app looks polished and is easy to style.
+- **Development Tools:** **ESLint** and **TypeScript** are integrated to maintain code quality and reliability.
 
-- Node.js and npm installed ([https://nodejs.org/en/download](https://nodejs.org/en/download))
+## Getting Started
 
-**2. Clone the Repository**
+To get up and running with the project, follow these steps:
 
-```
-git clone https://your-github-repo.com/kanban.git
-```
+1. **Clone the Repository:**
 
-**3. Install Dependencies**
+   ```bash
+   git clone https://github.com/belikedeep/kanbanBoard.git
+   ```
 
-```
-cd kanban
-npm install
-```
+2. **Install Dependencies:**
 
-**4. Development Server**
+   ```bash
+   npm install
+   ```
 
-```
-npm run dev
-```
+3. **Run the Development Server:**
 
-This will start the development server at http://localhost:3000 by default.
+   ```bash
+   npm run dev
+   ```
 
-**5. Build for Production**
+   This will launch the application locally at `http://localhost:3000`.
 
-```
-npm run build
-```
+4. **Build for Production:**
 
-This generates an optimized production build in the `.next` folder.
+   ```bash
+   npm run build
+   ```
+
+   This command generates an optimized build, ready for deployment.
+
+## Conclusion
+
+This project was an exciting opportunity to dive deeper into full-stack development, particularly with **Next.js** and **Prisma**. The combination of a sleek user interface and a powerful backend has resulted in a tool that’s both functional and user-friendly. I'm excited to continue expanding on this project, including adding user authentication and other features that can make the Kanban board even more powerful.
