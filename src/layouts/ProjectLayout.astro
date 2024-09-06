@@ -27,15 +27,15 @@ import formatDate from "../utils/dateFormatter";
           {frontmatter.title}
         </div>
       </h1>
-      {frontmatter.date && (
+      <!-- {frontmatter.date && (
         <p class="text-sm sm:text-base text-gray-400 mt-2">
           Last updated: {formatDate(frontmatter.date)}
         </p>
-      )}
+      )} -->
     </header>
     
     {frontmatter.image && (
-      <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-lg shadow-md mb-8" />
+      <img src={frontmatter.image} alt={frontmatter.title} class="w-full rounded-lg shadow-md" />
     )}
     
     {frontmatter.technologies && frontmatter.technologies.length > 0 && (
@@ -66,11 +66,11 @@ import formatDate from "../utils/dateFormatter";
       </a>
     )}
     
-    <a href="/projects"
+    <!-- <a href="/projects"
        class="block text-lg sm:text-xl mt-8 text-gray-200 font-medium hover:underline hover:text-blue-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70"
     >
       Back to all projects
-    </a>
+    </a> -->
   </Layout>
 
 <style is:global>

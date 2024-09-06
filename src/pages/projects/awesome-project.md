@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: My Awesome Project
 date: 2023-08-12
 author: Your Name
-image: ../../../public/icon.jpg
+image: ../../../icon.jpg
 ---
 
 ## Links
