@@ -8,7 +8,7 @@ image: ../../../icon.jpg
 
 ## Links
 
-- [GitHub Repository](https://github.com/belikedeep)
-- [Live Demo](https://github.com/belikedeep)
+- [GitHub Repository](https://github.com/belikedeep/abuse-detection)
+- [Live Demo](https://www.npmjs.com/package/abuse-detection)
 
 ## WIP
